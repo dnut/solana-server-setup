@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euxo pipefail
 
-ACCOUNTS_DISK=$(ACCOUNTS_DISK:-/dev/nvme1n1)
-DATA_DISK=$(DATA_DISK:-/dev/nvme2n1)
+ACCOUNTS_DISK=${ACCOUNTS_DISK:-'/dev/nvme1n1'}
+DATA_DISK=${DATA_DISK:-'/dev/nvme2n1'}
 
 config_fs() { local device=$1; local mount_point=$2;
     sudo mkfs.ext4 $device

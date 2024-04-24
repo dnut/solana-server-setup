@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 set -euxo pipefail
 
-
 sudo bash -c "cat >/etc/sysctl.d/21-solana-validator.conf <<EOF
 # Increase UDP buffer sizes
 net.core.rmem_default = 134217728

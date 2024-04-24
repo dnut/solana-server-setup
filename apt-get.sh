@@ -5,7 +5,7 @@ set -euxo pipefail
 export DEBIAN_FRONTEND=noninteractive
 export NEEDRESTART_MODE=a
 
-sudo apt-get \
+sudo --preserve-env apt-get \
     -o Dpkg::Options::=--force-confold \
     -o Dpkg::Options::=--force-confdef \
     -y --allow-downgrades --allow-remove-essential --allow-change-held-packages \
