@@ -2,7 +2,7 @@
 
 # Minimal setup to hook up a validator to devnet
 
-solana-validator \
+${VALIDATOR_BIN:-agave-validator} \
     --identity ~/.config/solana/id.json \
     --limit-ledger-size \
     --ledger /mnt/data/ledger \
@@ -14,4 +14,4 @@ solana-validator \
     --entrypoint entrypoint3.devnet.solana.com:8001 \
     --entrypoint entrypoint4.devnet.solana.com:8001 \
     --entrypoint entrypoint5.devnet.solana.com:8001 \
-    --log - | tee ~/solana-validator.log
+    --log - | tee ~/agave-validator.log
