@@ -12,3 +12,4 @@ agave/clone-and-build.sh
 
 sig/install-build-deps.sh && . ~/.profile
 sig/clone-build-init.sh
+sig/install-snapshot-finder.sh
