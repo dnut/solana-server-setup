@@ -1,14 +1,38 @@
+Go from zero to running a solana validator with a single turnkey script.
 
-### full solana testing node
+This automates the entire process of setting up a server from scratch to run agave or sig. It optionally launches an ec2 instance, then it configures your server to run the validator.
 
-Sets up a server to run agave or sig from source or binary.
+## Launch and setup EC2 instance from scratch
 
-Copy server.template.conf to server.conf and populate the missing configuration. To manage multiple server.conf files, you can give it a custom name such as node1.server.conf and export SERVER_CONF=node1.server.conf before running the scripts.
-
-Run `create-and-setup-full-test-node.sh` for the end-to-end setup. This uses the aws cli to create the instance, then automatically SSH in and set everything up.
-
-Alternatively, if you've already created the ec2 instance, you can run this one-liner on the server to initialize the server. The OS needs to be ubuntu, with two drives at /dev/nvme1n1 and /dev/nvme1n2 available for ledger and data.
+This uses the aws cli to launch an ec2 instance, then automatically SSH in and set everything up. You'll need to have the aws cli locally installed and authenticated.
 
 ```bash
-git clone https://github.com/dnut/solana-server-setup.git && cd solana-server-setup && ./setup-full-test-node.sh
+cp server.template.conf server.conf    # copy config template
+vim server.conf                        # populate missing configuration
+./create-and-setup-full-test-node.sh   # launch and setup instance
+```
+
+Normally the scripts expect to find `server.conf` in the working directory, but you can specify any arbitrary path with the `SERVER_CONF` variable:
+
+```bash
+SERVER_CONF=/path/to/mynode1.server.conf ./create-and-setup-full-test-node.sh
+```
+
+## Set up an existing server
+
+Alternatively, if you already have a running server, you can run this on the server to set up the server. The OS needs to be ubuntu, with two drives at /dev/nvme1n1 and /dev/nvme1n2 available for ledger and data.
+
+```bash
+cp server.template.conf server.conf    # copy config template (no changes needed)
+./setup-full-test-node.sh
+```
+
+> *Note: If you already created your server with `create-and-setup-full-test-node.sh`, you do not need to execute `setup-full-test-node.sh`. It was already run by that script.*
+
+## Run the validator
+
+`agave-validator` is installed on the machine and you can call it with the CLI options of your choosing. If you just want to start up a basic node with sane defaults, run the script that was installed for this purpose:
+
+```
+/home/ubuntu/run-basic-validator.sh
 ```
