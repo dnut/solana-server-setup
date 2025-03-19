@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euxo pipefail
 
-sh -c "$(curl -sSfL https://release.solana.com/stable/install)"
+sh -c "$(curl -sSfL https://release.anza.xyz/stable/install)"
 . ~/.profile
 
 solana-keygen new --no-bip39-passphrase
