@@ -1,7 +1,9 @@
 
-### full solana + sig testing node
+### full solana testing node
 
-Sets up a server to run either agave or sig from source or binary. 
+Sets up a server to run agave or sig from source or binary.
+
+Copy server.template.conf to server.conf and populate the missing configuration. To manage multiple server.conf files, you can give it a custom name such as node1.server.conf and export SERVER_CONF=node1.server.conf before running the scripts.
 
 Run `create-and-setup-full-test-node.sh` for the end-to-end setup. This uses the aws cli to create the instance, then automatically SSH in and set everything up.
 

@@ -1,9 +1,9 @@
 {
   "MaxCount": 1,
   "MinCount": 1,
-  "ImageId": "ami-0b8b44ec9a8f90422",
-  "InstanceType": "r6a.8xlarge",
-  "KeyName": "drew macbook",
+  "ImageId": "UNDEFINED",
+  "InstanceType": "UNDEFINED",
+  "KeyName": "UNDEFINED",
   "EbsOptimized": true,
   "BlockDeviceMappings": [
     {
@@ -12,8 +12,8 @@
         "Encrypted": false,
         "DeleteOnTermination": true,
         "Iops": 3000,
-        "SnapshotId": "snap-04a0c42370cdb2819",
-        "VolumeSize": 100,
+        "SnapshotId": "UNDEFINED",
+        "VolumeSize": "UNDEFINED",
         "VolumeType": "gp3",
         "Throughput": 250
       }
@@ -22,9 +22,9 @@
       "DeviceName": "/dev/sdb",
       "Ebs": {
         "Encrypted": false,
-        "DeleteOnTermination": false,
+        "DeleteOnTermination": true,
         "Iops": 3000,
-        "VolumeSize": 500,
+        "VolumeSize": "UNDEFINED",
         "VolumeType": "gp3",
         "Throughput": 700
       }
@@ -33,9 +33,9 @@
       "DeviceName": "/dev/sdc",
       "Ebs": {
         "Encrypted": false,
-        "DeleteOnTermination": false,
+        "DeleteOnTermination": true,
         "Iops": 3000,
-        "VolumeSize": 500,
+        "VolumeSize": "UNDEFINED",
         "VolumeType": "gp3",
         "Throughput": 700
       }
@@ -46,7 +46,7 @@
       "AssociatePublicIpAddress": true,
       "DeviceIndex": 0,
       "Groups": [
-        "sg-01b25ed04ed18fb80"
+        "UNDEFINED"
       ]
     }
   ],
@@ -56,7 +56,7 @@
       "Tags": [
         {
           "Key": "Name",
-          "Value": "agave"
+          "Value": "UNDEFINED"
         }
       ]
     }

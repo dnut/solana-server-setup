@@ -8,4 +8,4 @@ cd $HOME
 git clone $SIG_REPO
 cd sig
 git checkout $SIG_REF
-zig build run -- identity
+zig build sig -- identity
