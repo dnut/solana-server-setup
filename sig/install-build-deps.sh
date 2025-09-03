@@ -8,10 +8,10 @@ set -euxo pipefail
 # install zig
 mkdir -p $HOME/.local/share/
 cd $HOME/.local/share/
-wget https://ziglang.org/download/${ZIG_VERSION}/zig-linux-x86_64-${ZIG_VERSION}.tar.xz
-tar xf  zig-linux-x86_64-${ZIG_VERSION}.tar.xz
-rm -rf  zig-linux-x86_64-${ZIG_VERSION}.tar.xz
-wget https://github.com/zigtools/zls/releases/download/${ZIG_VERSION}/zls-x86_64-linux.tar.xz
+wget https://ziglang.org/download/${ZIG_VERSION}/zig-x86_64-linux-${ZIG_VERSION}.tar.xz
+tar xf zig-x86_64-linux-${ZIG_VERSION}.tar.xz
+rm -rf zig-x86_64-linux-${ZIG_VERSION}.tar.xz
+wget https://github.com/zigtools/zls/releases/download/${ZLS_VERSION}/zls-x86_64-linux.tar.xz
 tar xf zls-x86_64-linux.tar.xz
 mv zls zig-linux-x86_64-${ZIG_VERSION}
 rm LICENSE
