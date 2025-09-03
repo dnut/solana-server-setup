@@ -1,0 +1,3 @@
+- get ami, snapshot, and security groups dynamically based on name
+- add owner tag to instance
+- maybe easier way to customize region instead of using aws configuration profile
